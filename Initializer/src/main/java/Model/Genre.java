@@ -12,13 +12,30 @@ public class Genre {
 
 	@Id
 	@GeneratedValue
-	@Column(name="idGenre")
-	private int idGenre;
+	@Column(name="idgenre")
+	private int idgenre;
 	
-	@Column(name="WikidataGenreId")
-	private String WikidataGenreId;
+	@Column(name="wikidatagenreid")
+	private String wdgid;
 	
 	@Column(name="name")
 	private String name;
 	
+	public int getId(){
+		return idgenre;
+	}
+	public String getWikiId(){
+		return wdgid;
+	}
+	
+	public void setWikiId(String wid){
+		wdgid=wid;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public void setName(String n){
+		name =n;
+	}
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 import Model.Movie;
 
-@ComponentScan("Dao")
+@ComponentScan({"Dao","Model"})
 @Component(value="mRepo")
 public class MoviesDao  {
 
@@ -19,6 +19,10 @@ public class MoviesDao  {
 	
 	public void AddOneMovie(Movie m){
 		moviesRepo.save(m);
+	}
+	
+	public void deleteAll(){
+		moviesRepo.deleteAll();
 	}
 
 }

@@ -14,11 +14,11 @@ public class Movie {
 	@Column(name = "title")
 	private String title;
 
-	@Column(name = "WikidataMovieId")
-	private String WikidataMovieId;
+	@Column(name = "Wikidatamovieid")
+	private String wkdmid;
 
-	@Column(name = "GenreId")
-	private String genreId;
+	@Column(name = "genreid")
+	private String wdgenreId;
 
 	@Column(name = "done")
 	private boolean done;
@@ -36,19 +36,19 @@ public class Movie {
 	}
 
 	public String getWikidataMovieId() {
-		return WikidataMovieId;
+		return wkdmid;
 	}
 
 	public void setWikidataMovieID(String WDId) {
-		WikidataMovieId=WDId;
+		wkdmid=WDId;
 	}
 
 	public String getGenreId() {
-		return genreId;
+		return wdgenreId;
 	}
 
 	public void setGenreId(String GID) {
-		genreId=GID;
+		wdgenreId=GID;
 	}
 	
 	public boolean isDone(){
