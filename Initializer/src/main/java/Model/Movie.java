@@ -18,7 +18,7 @@ public class Movie {
 	private String wkdmid;
 
 	@Column(name = "genreid")
-	private String wdgenreId;
+	private Genre wdgenreId;
 
 	@Column(name = "done")
 	private boolean done;
@@ -43,12 +43,14 @@ public class Movie {
 		wkdmid=WDId;
 	}
 
-	public String getGenreId() {
+	public Genre getGenreId() {
 		return wdgenreId;
 	}
 
-	public void setGenreId(String GID) {
-		wdgenreId=GID;
+	public void setGenreId(Genre GID) {
+		wdgenreId=new Genre();
+		wdgenreId.setName(GID.getName());
+		wdgenreId.setWikiId(GID.getWikiId());
 	}
 	
 	public boolean isDone(){
